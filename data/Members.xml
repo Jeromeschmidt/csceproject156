@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<person>
+  <membership>M001</membership>
+  <type>G</type>
+  <id>232</id>
+  <name>Schmidt Consultanting</name>
+  <address>
+    <city>Omaha</city>
+    <state>NE</state>
+    <zip>68235-0199</zip>
+    <country>USA</country>
+  </address>
+</person><person>
+  <membership>M002</membership>
+  <type>S</type>
+  <id>955c</id>
+  <name>Yellow car inc</name>
+  <address>
+    <city>Lincoln</city>
+    <state>NE</state>
+    <zip>68512</zip>
+    <country>USA</country>
+  </address>
+</person><person>
+  <membership>M003</membership>
+  <type>S</type>
+  <id>377a</id>
+  <name>Worthless Club</name>
+  <address>
+    <city>Arbys City</city>
+    <state>CA</state>
+    <zip>90210</zip>
+    <country>USA</country>
+  </address>
+</person><person>
+  <membership>M004</membership>
+  <type>G</type>
+  <id>331f</id>
+  <name>hornswallow</name>
+  <address>
+    <city>Lincoln</city>
+    <state>NE</state>
+    <zip>68533</zip>
+    <country>USA</country>
+  </address>
+</person><person>
+  <membership>M005</membership>
+  <type>G</type>
+  <id>RGB</id>
+  <name>DELL</name>
+  <address>
+    <city>Saint Paul</city>
+    <state>MN</state>
+    <zip>55122</zip>
+    <country>USA</country>
+  </address>
+</person>

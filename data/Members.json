@@ -1,0 +1,60 @@
+{
+  "membership": "M001",
+  "type": "G",
+  "id": "232",
+  "name": "Schmidt Consultanting",
+  "address": {
+    "city": "Omaha",
+    "state": "NE",
+    "zip": "68235-0199",
+    "country": "USA"
+  }
+}
+{
+  "membership": "M002",
+  "type": "S",
+  "id": "955c",
+  "name": "Yellow car inc",
+  "address": {
+    "city": "Lincoln",
+    "state": "NE",
+    "zip": "68512",
+    "country": "USA"
+  }
+}
+{
+  "membership": "M003",
+  "type": "S",
+  "id": "377a",
+  "name": "Worthless Club",
+  "address": {
+    "city": "Arbys City",
+    "state": "CA",
+    "zip": "90210",
+    "country": "USA"
+  }
+}
+{
+  "membership": "M004",
+  "type": "G",
+  "id": "331f",
+  "name": "hornswallow",
+  "address": {
+    "city": "Lincoln",
+    "state": "NE",
+    "zip": "68533",
+    "country": "USA"
+  }
+}
+{
+  "membership": "M005",
+  "type": "G",
+  "id": "RGB",
+  "name": "DELL",
+  "address": {
+    "city": "Saint Paul",
+    "state": "MN",
+    "zip": "55122",
+    "country": "USA"
+  }
+}

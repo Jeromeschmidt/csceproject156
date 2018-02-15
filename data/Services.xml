@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<csce156project.Year>
+  <code>b29e</code>
+  <product>Y</product>
+  <endDate>2016-02-14</endDate>
+  <startDate>2017-02-13</startDate>
+  <address>
+    <city>Omaha</city>
+    <state>NE</state>
+    <zip>68522-0115</zip>
+    <country>USA</country>
+  </address>
+  <cost>Silver Package</cost>
+</csce156project.Year><csce156project.Equipment>
+  <code>ff23</code>
+  <product>R</product>
+  <cost>Fighting mitten-small</cost>
+</csce156project.Equipment><csce156project.Day>
+  <code>fp12</code>
+  <product>P</product>
+  <date>2015-11-22</date>
+  <time>16:12</time>
+  <address>
+    <city>Lincoln</city>
+    <state> NE</state>
+    <zip> 64789</zip>
+    <country> USA</country>
+  </address>
+  <cost>22.45</cost>
+</csce156project.Day><csce156project.Parking>
+  <code>90fa</code>
+  <product>P</product>
+  <cost>30.00</cost>
+</csce156project.Parking><csce156project.Day>
+  <code>1239</code>
+  <product>P</product>
+  <date>2017-03-19</date>
+  <time>16:35</time>
+  <address>
+    <city>Madison</city>
+    <state> WI</state>
+    <zip> 78789</zip>
+    <country> USA</country>
+  </address>
+  <cost>12.00</cost>
+</csce156project.Day>

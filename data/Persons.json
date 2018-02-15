@@ -1,0 +1,73 @@
+{
+  "firstName": "Jerome",
+  "lastName": "Schmidt",
+  "id": "955c",
+  "address": {
+    "city": "Lincoln",
+    "state": "NE",
+    "zip": "68522",
+    "country": "USA"
+  },
+  "email": {
+    "emails": [
+      "schmidt.jerome@yahoo.com",
+      "schmidt.jerome12@gmail.com"
+    ]
+  }
+}
+{
+  "firstName": "Collin",
+  "lastName": "Cornman",
+  "id": "366a",
+  "address": {
+    "city": "Saint Paul",
+    "state": "MN",
+    "zip": "55011",
+    "country": "USA"
+  },
+  "email": {
+    "emails": [
+      "collincornman@gmail.com",
+      "cc@capital.com"
+    ]
+  }
+}
+{
+  "firstName": "Demi",
+  "lastName": "Van Reeuwijk",
+  "id": "57ab",
+  "address": {
+    "city": "Eagan",
+    "state": "MN",
+    "zip": "55122",
+    "country": "USA"
+  },
+  "email": {
+    "emails": [
+      "dvr@gmail.com",
+      "damedawg@CIA.gov"
+    ]
+  }
+}
+{
+  "firstName": "Isaia",
+  "lastName": "Casas",
+  "id": "7534",
+  "address": {
+    "city": "Denver",
+    "state": "CO",
+    "zip": "66666",
+    "country": "USA"
+  }
+}
+{
+  "firstName": "Ryan",
+  "lastName": "Birner",
+  "id": "gf76",
+  "address": {
+    "city": "Albany",
+    "state": "NJ",
+    "zip": "55555",
+    "country": "USA"
+  }
+}

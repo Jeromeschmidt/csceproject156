@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<person>
+  <firstName>Jerome</firstName>
+  <lastName>Schmidt</lastName>
+  <id>955c</id>
+  <address>
+    <city>Lincoln</city>
+    <state>NE</state>
+    <zip>68522</zip>
+    <country>USA</country>
+  </address>
+  <email>
+    <emails>
+      <string>schmidt.jerome@yahoo.com</string>
+      <string>schmidt.jerome12@gmail.com</string>
+    </emails>
+  </email>
+</person><person>
+  <firstName>Collin</firstName>
+  <lastName>Cornman</lastName>
+  <id>366a</id>
+  <address>
+    <city>Saint Paul</city>
+    <state>MN</state>
+    <zip>55011</zip>
+    <country>USA</country>
+  </address>
+  <email>
+    <emails>
+      <string>collincornman@gmail.com</string>
+      <string>cc@capital.com</string>
+    </emails>
+  </email>
+</person><person>
+  <firstName>Demi</firstName>
+  <lastName>Van Reeuwijk</lastName>
+  <id>57ab</id>
+  <address>
+    <city>Eagan</city>
+    <state>MN</state>
+    <zip>55122</zip>
+    <country>USA</country>
+  </address>
+  <email>
+    <emails>
+      <string>dvr@gmail.com</string>
+      <string>damedawg@CIA.gov</string>
+    </emails>
+  </email>
+</person><person>
+  <firstName>Isaia</firstName>
+  <lastName>Casas</lastName>
+  <id>7534</id>
+  <address>
+    <city>Denver</city>
+    <state>CO</state>
+    <zip>66666</zip>
+    <country>USA</country>
+  </address>
+</person><person>
+  <firstName>Ryan</firstName>
+  <lastName>Birner</lastName>
+  <id>gf76</id>
+  <address>
+    <city>Albany</city>
+    <state>NJ</state>
+    <zip>55555</zip>
+    <country>USA</country>
+  </address>
+</person>
