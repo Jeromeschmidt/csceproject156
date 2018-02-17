@@ -1,17 +1,19 @@
 package csce156project;
 
+import java.util.List;
 
-public class Invoice 
+
+public class Invoice<T> 
 {
 
 	private String invoiceCode;
 	private String memberCode;
 	private String pTCode;
 	private String invoiceDate;
-	private String productList;
+	private List<T> productList;
 	
 	
-	public Invoice(String invoiceCode, String memberCode, String pTCode,String invoiceDate, String productList) {
+	public Invoice(String invoiceCode, String memberCode, String pTCode,String invoiceDate, List<T> productList) {
 		super();
 		this.invoiceCode = invoiceCode;
 		this.memberCode = memberCode;
@@ -51,8 +53,7 @@ public class Invoice
 	}
 
 
-	public String getInvoiceDate() 
-	{
+	public String getInvoiceDate() {
 		return invoiceDate;
 	}
 
@@ -62,12 +63,16 @@ public class Invoice
 	}
 
 
-	public String getProductList() {
+	public List<T> getProductList() 
+	{
+		
+		
+		
 		return productList;
 	}
 
 
-	public void setProductList(String productList) {
+	public void setProductList(List<T> productList) {
 		this.productList = productList;
 	}
 	

@@ -3,6 +3,7 @@ package fileReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import csce156project.Address;
@@ -193,7 +194,8 @@ public class flatFileReader {
 	}
 
 	
-	public static <Invoices> ArrayList<Invoice> readInvoice() 
+	@SuppressWarnings({ "null", "unchecked", "rawtypes" })
+	public static <Invoices, T> ArrayList<Invoice> readInvoice() 
 	{
 		int j = 0;
 		ArrayList<Invoice> result = new ArrayList<Invoice>();
@@ -217,10 +219,17 @@ public class flatFileReader {
 				String memberCode = data4[1];
 				String PTCode = data4[2];
 				String InvoiceDate = data4[3];
-				String ProductList = data4[4];
+				String temp = data4[4];
+				List<T> ProductList = null;
 				
+				for(int i = 0; i < temp.length(); i++)
+				{
+					String[] data = temp.split(",");
+					ProductList.add((T) data);
+				}
+			
 				
-				Invoice invoice = new Invoice(invoiceCode, memberCode, PTCode, InvoiceDate, ProductList);
+				Invoice<T> invoice = new Invoice<T>(invoiceCode, memberCode, PTCode, InvoiceDate, ProductList);
 				
 				//per1 = new Membership(member, type, id, name, address);
 				result.add(invoice);
