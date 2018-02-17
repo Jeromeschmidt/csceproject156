@@ -191,6 +191,13 @@ public class flatFileReader {
 		return result1;
 	}
 
+	
+	public static ArrayList<Service> readInvoice() 
+	{
+		
+		
+		return null;
+	}
 
 	
 }
