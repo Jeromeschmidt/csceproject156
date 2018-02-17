@@ -9,6 +9,7 @@ import csce156project.Address;
 import csce156project.Day;
 import csce156project.Emails;
 import csce156project.Equipment;
+import csce156project.Invoice;
 import csce156project.Membership;
 import csce156project.Parking;
 import csce156project.Persons;
@@ -192,11 +193,45 @@ public class flatFileReader {
 	}
 
 	
-	public static ArrayList<Service> readInvoice() 
+	public static <Invoices> ArrayList<Invoice> readInvoice() 
 	{
+		int j = 0;
+		ArrayList<Invoice> result = new ArrayList<Invoice>();
+		String fileName = "Invoices.dat";
+		Scanner t = null;
+		try {
+			t = new Scanner(new File(fileName));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		
+		while (t.hasNextLine()) {
+			if (j == 0) {
+				// skip first line
+				t.nextLine();
+			} else {
+				
+				String line = t.nextLine();
+				String[] data4 = line.split(";");
+				String invoiceCode = data4[0];
+				String memberCode = data4[1];
+				String PTCode = data4[2];
+				String InvoiceDate = data4[3];
+				String ProductList = data4[4];
+				
+				
+				Invoice invoice = new Invoice(invoiceCode, memberCode, PTCode, InvoiceDate, ProductList);
+				
+				//per1 = new Membership(member, type, id, name, address);
+				result.add(invoice);
+			}
+
+			j++;
+		}
+		t.close();
+		//return result;
 		
-		return null;
+		return result;
 	}
 
 	
