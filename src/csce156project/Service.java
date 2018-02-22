@@ -1,9 +1,9 @@
 package csce156project;
 
-import Interface.ExecutiveReport;
-import Interface.IndividualReport;
+import Interface.Cost;
 
-public abstract class Service implements ExecutiveReport, IndividualReport{
+
+public abstract class Service implements Cost{
 
 	private String code;
 	private String product;
@@ -30,11 +30,6 @@ public abstract class Service implements ExecutiveReport, IndividualReport{
 	public void setProduct(String product) {
 		this.product = product;
 	}
-	
-	public String getCost() {
-		return getCost();
-	}
-	
 
 	
 	

@@ -45,17 +45,10 @@ public class Day extends Service{
 		this.cost = cost;
 	}
 
-
 	@Override
-	public void computeEReport() {
+	public double getCostt() {
 		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void computeIReport() {
-		// TODO Auto-generated method stub
-		
+		return Double.parseDouble(cost);
 	}
 
 

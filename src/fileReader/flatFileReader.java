@@ -144,9 +144,10 @@ public class flatFileReader {
 					String state = addComp[2];
 					String zip = addComp[3];
 					String country = addComp[4];
-					String cost = data[5];
+					String pack = data[5];
+					String cost = data[6];
 					address = new Address(street, city, state, zip, country);
-					y = new Year(code, product, endDate, startDate, address, cost);
+					y = new Year(code, product, endDate, startDate, address, pack, cost);
 					result1.add(y);
 				}
 				else if(data[1].equals("P")) {
@@ -180,8 +181,9 @@ public class flatFileReader {
 					Equipment e;
 					String code= data[0];
 					String product = "R";
-					String cost = data[2];
-					e = new Equipment(code, product, cost);
+					String name = data[2];
+					String cost = data[3];
+					e = new Equipment(code, product, name, cost);
 					result1.add(e);
 				}
 				
@@ -224,7 +226,6 @@ public class flatFileReader {
 								
 				Invoice<T> invoice = new Invoice<T>(invoiceCode, memberCode, PTCode, InvoiceDate, ProductList);
 				
-				//per1 = new Membership(member, type, id, name, address);
 				result.add(invoice);
 			}
 

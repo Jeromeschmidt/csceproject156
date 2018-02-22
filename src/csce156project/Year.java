@@ -6,14 +6,16 @@ public class Year extends Service{
 	private String startDate;
 	private Address address;
 	private String cost;
+	private String pack;
 	
 	//creates constructor
-	public Year(String code, String product, String endDate, String startDate, Address a, String cost) {
+	public Year(String code, String product, String endDate, String startDate, Address a, String pack, String cost) {
 		super(code, product);
 		this.endDate = endDate;
 		this.startDate = startDate;
 		this.address = a;
 		this.cost = cost;
+		this.setPack(pack);
 	}
 
 	//getters and setters for new variables
@@ -43,15 +45,18 @@ public class Year extends Service{
 	}
 
 	@Override
-	public void computeEReport() {
+	public double getCostt() {
 		// TODO Auto-generated method stub
-		
+		return Double.parseDouble(cost);
 	}
 
-	@Override
-	public void computeIReport() {
-		// TODO Auto-generated method stub
-		
+	public String getPack() {
+		return pack;
 	}
+
+	public void setPack(String pack) {
+		this.pack = pack;
+	}
+
 
 }

@@ -2,11 +2,9 @@ package csce156project;
 
 import java.util.List;
 
-import Interface.ExecutiveReport;
-import Interface.IndividualReport;
 
 
-public class Invoice<T> implements ExecutiveReport,IndividualReport{
+public class Invoice<T>{
 
 	private String invoiceCode;
 	private String memberCode;
@@ -80,19 +78,6 @@ public class Invoice<T> implements ExecutiveReport,IndividualReport{
 	}
 
 
-	@Override
-	public void computeIReport() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void computeEReport() {
-		// TODO Auto-generated method stub
-		System.out.println(invoiceCode + "   ");
-	}
-	
 	
 	
 }

@@ -19,15 +19,10 @@ public class Parking extends Service{
 	}
 
 	@Override
-	public void computeEReport() {
+	public double getCostt() {
 		// TODO Auto-generated method stub
-		
+		return Double.parseDouble(cost);
 	}
 
-	@Override
-	public void computeIReport() {
-		// TODO Auto-generated method stub
-		
-	}
 	
 }

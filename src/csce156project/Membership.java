@@ -1,9 +1,9 @@
 package csce156project;
 
-import Interface.ExecutiveReport;
-import Interface.IndividualReport;
 
-public class Membership implements ExecutiveReport, IndividualReport {
+
+
+public class Membership{
 
 	public String membership;
 	public String type;
@@ -69,16 +69,5 @@ public class Membership implements ExecutiveReport, IndividualReport {
 		this.name = name;
 	}
 
-	@Override
-	public void computeIReport() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void computeEReport() {
-		// TODO Auto-generated method stub
-		System.out.print(name + " [" + type + "]               ");
-	}
 
 }

@@ -3,11 +3,13 @@ package csce156project;
 public class Equipment extends Service{
 	
 	private String cost;
+	private String name;
 	
 	//creates constructor
-	public Equipment(String code, String product, String cost) {
+	public Equipment(String code, String product, String name, String cost) {
 		super(code, product);
 		this.cost = cost;
+		this.setName(name);
 	}
 
 	//getters and setters for new variables
@@ -18,17 +20,18 @@ public class Equipment extends Service{
 		this.cost = cost;
 	}
 	
-
 	@Override
-	public void computeEReport() {
+	public double getCostt() {
 		// TODO Auto-generated method stub
-		
+		return Double.parseDouble(cost);
 	}
 
-	@Override
-	public void computeIReport() {
-		// TODO Auto-generated method stub
-		
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	

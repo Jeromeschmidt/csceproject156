@@ -14,47 +14,56 @@ public class Organization {
 	List<Membership> memberList = flatFileReader.readMembers();
 	List<Service> serviceList = flatFileReader.readService();
 
+	String member = null;
 	String pile = null;
 
 	public String getMember(String code) {
 
 		for (int j = 0; j < memberList.size(); j++) {
-			if (code.equals(memberList.get(j).getId())) {
-				pile = memberList.get(j).getName() + " [" + memberList.get(j).getType() + "] ";
+			if (code.equals(memberList.get(j).getMembership())) {
+				member = memberList.get(j).getName() + " [" + memberList.get(j).getType() + "] ";
+			} else {
+
 			}
 		}
 
-		return pile;
+		return member;
 
 	}
 
 	public String getTrainer(String ptCode) {
 		for (int j = 0; j < personList.size(); j++) {
 			if (ptCode.equals(personList.get(j).getId())) {
-				pile = personList.get(j).getId();
+				pile = personList.get(j).getLastName() + ", " + personList.get(j).getFirstName();
 			}
 		}
 
 		return pile;
 	}
 
-	
 	double subtotal = 0;
+	
+
 	public double getSubtotal(String[] productList) {
-		
-		
+		double total = 0;
 		for (int i = 0; i < productList.length; i++) {
 			String[] bits = productList[i].split(":");
 			String cod = bits[0];
 			int quant = Integer.parseInt(bits[1]);
+			
 			for (int j = 0; j < serviceList.size(); j++) {
 				if (cod.equals(serviceList.get(j).getCode())) {
-					//subtotal = quant*serviceList.get(j);
+					if(serviceList.get(j).getProduct().equals("Y")){
+						subtotal=0;
+					}else {
+					subtotal = quant * serviceList.get(j).getCostt();
+					}
 				}
 			}
+			total += subtotal;
 		}
 
-		return 0.0;
+		return total;
 	}
 
 }
