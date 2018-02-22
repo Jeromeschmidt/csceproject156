@@ -46,6 +46,7 @@ public class Organization {
 
 	public double getSubtotal(String[] productList) {
 		double total = 0;
+		String isMem = null;
 		for (int i = 0; i < productList.length; i++) {
 			String[] bits = productList[i].split(":");
 			String cod = bits[0];
@@ -53,10 +54,13 @@ public class Organization {
 			
 			for (int j = 0; j < serviceList.size(); j++) {
 				if (cod.equals(serviceList.get(j).getCode())) {
-					if(serviceList.get(j).getProduct().equals("Y")){
-						subtotal=0;
+					if(serviceList.get(j).getProduct().equals("Y") || serviceList.get(j).getProduct().equals("D")){
+						isMem = "No";
+						if(isMem != "No" || serviceList.get(j).getProduct().equals("P")) {
+						subtotal = quant * serviceList.get(j).getCostt();
+						}
 					}else {
-					subtotal = quant * serviceList.get(j).getCostt();
+					
 					}
 				}
 			}
