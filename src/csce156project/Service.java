@@ -1,17 +1,18 @@
 package csce156project;
 
 import Interface.Cost;
+import Interface.Discount;
 
 
-public abstract class Service implements Cost{
+public abstract class Service implements Cost, Discount{
 
 	private String code;
-	private String product;
+	protected String product;
 	
 	//creates constructor
 	public Service(String code, String product) {
 		this.code = code;
-		this.setProduct(product);
+		this.product = product;
 	}
 
 	//getters and setters for new variables

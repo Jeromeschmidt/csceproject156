@@ -51,5 +51,17 @@ public class Day extends Service{
 		return Double.parseDouble(cost);
 	}
 
+	@Override
+	public double getDiscount() {
+		// TODO Auto-generated method stub
+		double discount = 1;
+		
+		if(date.contains("-01")) {
+			discount = 0.50;
+		}
+		return discount;
+		
+	}
+
 
 }

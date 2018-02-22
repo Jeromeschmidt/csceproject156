@@ -162,7 +162,7 @@ public class flatFileReader {
 					Day d;
 					Address address;
 					String code = data[0];
-					String product = "P";
+					String product = "D";
 					String[] timeDate = data[2].split(" ");
 					String date = timeDate[0];
 					String time = timeDate[1];

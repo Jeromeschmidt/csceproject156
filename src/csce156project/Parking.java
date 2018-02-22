@@ -23,6 +23,12 @@ public class Parking extends Service{
 		// TODO Auto-generated method stub
 		return Double.parseDouble(cost);
 	}
+	
+	@Override
+	public double getDiscount() {
+		// TODO Auto-generated method stub
+		return 1;
+	}
 
 	
 }

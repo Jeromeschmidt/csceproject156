@@ -34,6 +34,12 @@ public class Equipment extends Service{
 		this.name = name;
 	}
 
-	
+	@Override
+	public double getDiscount() {
+		// TODO Auto-generated method stub
+		
+		return 0.95;
+	}
+
 	
 }

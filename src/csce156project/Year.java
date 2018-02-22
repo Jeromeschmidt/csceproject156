@@ -57,6 +57,19 @@ public class Year extends Service{
 	public void setPack(String pack) {
 		this.pack = pack;
 	}
+	
+	
+
+	@Override
+	public double getDiscount() {
+		// TODO Auto-generated method stub
+		double discount = 1;
+		String[] month = startDate.split("-");
+		if(Double.parseDouble(month[1]) == 01) {
+			discount = 0.85;
+		}
+		return discount;
+	}
 
 
 }
