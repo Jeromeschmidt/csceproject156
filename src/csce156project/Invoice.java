@@ -2,24 +2,27 @@ package csce156project;
 
 import java.util.List;
 
+import Interface.ExecutiveReport;
+import Interface.IndividualReport;
 
-public class Invoice<T> 
-{
+
+public class Invoice<T> implements ExecutiveReport,IndividualReport{
 
 	private String invoiceCode;
 	private String memberCode;
 	private String pTCode;
 	private String invoiceDate;
-	private List<T> productList;
+	private String[] productList;
 	
 	
-	public Invoice(String invoiceCode, String memberCode, String pTCode,String invoiceDate, List<T> productList) {
+	public Invoice(String invoiceCode, String memberCode, String pTCode,String invoiceDate, String[] productList) {
 		super();
 		this.invoiceCode = invoiceCode;
 		this.memberCode = memberCode;
 		this.pTCode = pTCode;
 		this.invoiceDate = invoiceDate;
 		this.productList = productList;
+
 	}
 
 
@@ -63,7 +66,7 @@ public class Invoice<T>
 	}
 
 
-	public List<T> getProductList() 
+	public String[] getProductList() 
 	{
 		
 		
@@ -72,8 +75,22 @@ public class Invoice<T>
 	}
 
 
-	public void setProductList(List<T> productList) {
+	public void setProductList(String[] productList) {
 		this.productList = productList;
+	}
+
+
+	@Override
+	public void computeIReport() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void computeEReport() {
+		// TODO Auto-generated method stub
+		System.out.println(invoiceCode + "   ");
 	}
 	
 	

@@ -220,15 +220,8 @@ public class flatFileReader {
 				String PTCode = data4[2];
 				String InvoiceDate = data4[3];
 				String temp = data4[4];
-				List<T> ProductList = null;
-				
-				for(int i = 0; i < temp.length(); i++)
-				{
-					String[] data = temp.split(",");
-					ProductList.add((T) data);
-				}
-			
-				
+				String[] ProductList = temp.split(",");
+								
 				Invoice<T> invoice = new Invoice<T>(invoiceCode, memberCode, PTCode, InvoiceDate, ProductList);
 				
 				//per1 = new Membership(member, type, id, name, address);

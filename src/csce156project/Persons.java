@@ -1,7 +1,9 @@
 package csce156project;
 
+import Interface.ExecutiveReport;
+import Interface.IndividualReport;
 
-public class Persons {
+public class Persons implements ExecutiveReport, IndividualReport{
 
 	public String firstName;
 	public String lastName;
@@ -59,6 +61,18 @@ public class Persons {
 
 	public void setMail(Emails mail) {
 		this.email = mail;
+	}
+
+	@Override
+	public void computeIReport() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void computeEReport() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 

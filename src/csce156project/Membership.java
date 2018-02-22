@@ -1,23 +1,28 @@
 package csce156project;
 
+import Interface.ExecutiveReport;
+import Interface.IndividualReport;
 
-
-public class Membership {
+public class Membership implements ExecutiveReport, IndividualReport {
 
 	public String membership;
 	public String type;
 	private String id;
 	private String name;
 	private Address address;
-	
+
 	public Membership(String membership, String type, String id, String name, Address addr) {
-		
+
 		this.membership = membership;
-		this.type = type;
-		this.id=id;
+		if (type.equals("G")) {
+			this.type = "General";
+		} else {
+			this.type = "Student";
+		}
+		this.id = id;
 		this.setName(name);
 		this.address = addr;
-		
+
 	}
 
 	public String getId() {
@@ -37,7 +42,11 @@ public class Membership {
 	}
 
 	public void setType(String type) {
-		this.type = type;
+		if (type.equals("G")) {
+			this.type = "General";
+		} else {
+			this.type = "Student";
+		}
 	}
 
 	public void setId(String id) {
@@ -60,12 +69,16 @@ public class Membership {
 		this.name = name;
 	}
 
-	
+	@Override
+	public void computeIReport() {
+		// TODO Auto-generated method stub
 
+	}
 
+	@Override
+	public void computeEReport() {
+		// TODO Auto-generated method stub
+		System.out.print(name + " [" + type + "]               ");
+	}
 
-
-	
-	
-	
 }

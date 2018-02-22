@@ -44,5 +44,19 @@ public class Day extends Service{
 	public void setCost(String cost) {
 		this.cost = cost;
 	}
-	
+
+
+	@Override
+	public void computeEReport() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void computeIReport() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 }
