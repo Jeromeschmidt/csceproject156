@@ -96,6 +96,7 @@ public class InvoiceReport {
 			System.out.printf("%5s %5s %40s %10s %10s\n", "Code", "Item", "Subtotal", "Tax", "Total");
 
 			
+			
 				
 //				for (int p = 0; p < codes.length; p++) {
 //					{
