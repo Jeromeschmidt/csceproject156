@@ -3,7 +3,7 @@ package csce156project;
 
 public class Address{
 	
-	
+	private String address;
 	private String city;
 	private String state;
 	private String zip;
@@ -13,6 +13,7 @@ public class Address{
 	//creates constructor
 	public Address(String address, String city, String state, String zip, String country) 
 	{
+		this.setAddress(address);
 		this.city = city;
 		this.state = state;
 		this.zip= zip;
@@ -50,6 +51,14 @@ public class Address{
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 

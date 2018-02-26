@@ -63,5 +63,11 @@ public class Day extends Service{
 		
 	}
 
+	@Override
+	public double getTax() {
+		// TODO Auto-generated method stub
+		return 0.06;
+	}
+
 
 }

@@ -32,7 +32,7 @@ public abstract class Service implements Cost, Discount{
 		this.product = product;
 	}
 
-	
+	public abstract double getTax();
 	
 
 

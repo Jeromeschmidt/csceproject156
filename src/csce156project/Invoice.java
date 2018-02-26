@@ -2,9 +2,13 @@ package csce156project;
 
 import java.util.List;
 
+import fileReader.flatFileReader;
+
 
 
 public class Invoice<T>{
+
+	
 
 	private String invoiceCode;
 	private String memberCode;
@@ -77,7 +81,7 @@ public class Invoice<T>{
 		this.productList = productList;
 	}
 
-
+	
 	
 	
 }

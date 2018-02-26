@@ -38,7 +38,13 @@ public class Equipment extends Service{
 	public double getDiscount() {
 		// TODO Auto-generated method stub
 		
-		return 0.95;
+		return 1;
+	}
+
+	@Override
+	public double getTax() {
+		// TODO Auto-generated method stub
+		return 0.04;
 	}
 
 	

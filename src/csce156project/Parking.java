@@ -30,5 +30,11 @@ public class Parking extends Service{
 		return 1;
 	}
 
+	@Override
+	public double getTax() {
+		// TODO Auto-generated method stub
+		return 0.04;
+	}
+
 	
 }

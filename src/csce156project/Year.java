@@ -71,5 +71,11 @@ public class Year extends Service{
 		return discount;
 	}
 
+	@Override
+	public double getTax() {
+		// TODO Auto-generated method stub
+		return 0.06;
+	}
+
 
 }
