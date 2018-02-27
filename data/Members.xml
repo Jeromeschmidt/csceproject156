@@ -1,57 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <person>
   <membership>M001</membership>
-  <type>G</type>
-  <id>232</id>
-  <name>Schmidt Consultanting</name>
+  <type>General</type>
+  <id>231</id>
+  <name>Clark Consultants</name>
   <address>
-    <city>Omaha</city>
+    <address>259 Concorde Suites</address>
+    <city>Lincoln</city>
     <state>NE</state>
-    <zip>68235-0199</zip>
+    <zip>68588-0115</zip>
     <country>USA</country>
   </address>
 </person><person>
   <membership>M002</membership>
-  <type>S</type>
-  <id>955c</id>
-  <name>Yellow car inc</name>
+  <type>Student</type>
+  <id>944c</id>
+  <name>CAS International Fellows</name>
   <address>
+    <address>1223 Oldfather Hall</address>
     <city>Lincoln</city>
     <state>NE</state>
-    <zip>68512</zip>
+    <zip>68503</zip>
     <country>USA</country>
   </address>
 </person><person>
   <membership>M003</membership>
-  <type>S</type>
-  <id>377a</id>
-  <name>Worthless Club</name>
+  <type>Student</type>
+  <id>306a</id>
+  <name>Valueless Club</name>
   <address>
-    <city>Arbys City</city>
+    <address>123 Venture Way</address>
+    <city>Culver City</city>
     <state>CA</state>
-    <zip>90210</zip>
+    <zip>90230</zip>
     <country>USA</country>
   </address>
 </person><person>
   <membership>M004</membership>
-  <type>G</type>
-  <id>331f</id>
-  <name>hornswallow</name>
+  <type>General</type>
+  <id>321f</id>
+  <name>Stony Brook</name>
   <address>
-    <city>Lincoln</city>
-    <state>NE</state>
-    <zip>68533</zip>
+    <address>9800 Savage Rd</address>
+    <city>Fort Meade</city>
+    <state>MD</state>
+    <zip>20755</zip>
     <country>USA</country>
   </address>
 </person><person>
   <membership>M005</membership>
-  <type>G</type>
-  <id>RGB</id>
-  <name>DELL</name>
+  <type>General</type>
+  <id>bbchar</id>
+  <name>Hewlett Industries</name>
   <address>
-    <city>Saint Paul</city>
-    <state>MN</state>
-    <zip>55122</zip>
+    <address>1060 West Addison</address>
+    <city>Chicago</city>
+    <state>IL</state>
+    <zip>60601</zip>
+    <country>USA</country>
+  </address>
+</person><person>
+  <membership>M006</membership>
+  <type>Student</type>
+  <id>321dr</id>
+  <name>Gregory Smith</name>
+  <address>
+    <address>456 West 7th St.</address>
+    <city>Omaha</city>
+    <state>NE</state>
+    <zip>68500</zip>
     <country>USA</country>
   </address>
 </person>

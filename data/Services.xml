@@ -2,45 +2,109 @@
 <csce156project.Year>
   <code>b29e</code>
   <product>Y</product>
-  <endDate>2016-02-14</endDate>
-  <startDate>2017-02-13</startDate>
+  <endDate>2017-01-13</endDate>
+  <startDate>2018-01-12</startDate>
   <address>
-    <city>Omaha</city>
+    <address>179 West Lane</address>
+    <city>Lincoln</city>
     <state>NE</state>
-    <zip>68522-0115</zip>
+    <zip>68588-0115</zip>
     <country>USA</country>
   </address>
-  <cost>Silver Package</cost>
+  <cost>450.00</cost>
+  <pack>Gold Package</pack>
 </csce156project.Year><csce156project.Equipment>
   <code>ff23</code>
   <product>R</product>
-  <cost>Fighting mitten-small</cost>
+  <cost>4.99</cost>
+  <name>Boxing Glove-Large</name>
 </csce156project.Equipment><csce156project.Day>
   <code>fp12</code>
-  <product>P</product>
-  <date>2015-11-22</date>
-  <time>16:12</time>
+  <product>D</product>
+  <date>2016-10-21</date>
+  <time>13:10</time>
   <address>
-    <city>Lincoln</city>
+    <address>3555 South 140th Plaza</address>
+    <city>Omaha</city>
     <state> NE</state>
-    <zip> 64789</zip>
+    <zip> 68144</zip>
     <country> USA</country>
   </address>
-  <cost>22.45</cost>
+  <cost>21.50</cost>
 </csce156project.Day><csce156project.Parking>
   <code>90fa</code>
   <product>P</product>
-  <cost>30.00</cost>
+  <cost>25.00</cost>
 </csce156project.Parking><csce156project.Day>
   <code>1239</code>
-  <product>P</product>
-  <date>2017-03-19</date>
-  <time>16:35</time>
+  <product>D</product>
+  <date>2018-01-16</date>
+  <time>15:30</time>
   <address>
-    <city>Madison</city>
+    <address>755 Willard Drive</address>
+    <city>Ashwaubenon</city>
     <state> WI</state>
-    <zip> 78789</zip>
+    <zip> 54304</zip>
     <country> USA</country>
   </address>
-  <cost>12.00</cost>
-</csce156project.Day>
+  <cost>11.00</cost>
+</csce156project.Day><csce156project.Day>
+  <code>782g</code>
+  <product>D</product>
+  <date>2016-11-10</date>
+  <time>10:00</time>
+  <address>
+    <address>6301 University Ave</address>
+    <city>Cedar Falls</city>
+    <state> IA</state>
+    <zip> 50613</zip>
+    <country> USA</country>
+  </address>
+  <cost>25.00</cost>
+</csce156project.Day><csce156project.Parking>
+  <code>3289</code>
+  <product>P</product>
+  <cost>55.00</cost>
+</csce156project.Parking><csce156project.Equipment>
+  <code>32f4</code>
+  <product>R</product>
+  <cost>5.50</cost>
+  <name>Tennis Racket</name>
+</csce156project.Equipment><csce156project.Year>
+  <code>3y92</code>
+  <product>Y</product>
+  <endDate>2017-11-24</endDate>
+  <startDate>2018-11-23</startDate>
+  <address>
+    <address>449 3rd Ave</address>
+    <city>Omaha</city>
+    <state>NE</state>
+    <zip>68521-5593</zip>
+    <country>USA</country>
+  </address>
+  <cost>550.0</cost>
+  <pack>Ultimate Workout</pack>
+</csce156project.Year><csce156project.Parking>
+  <code>90fb</code>
+  <product>P</product>
+  <cost>20.00</cost>
+</csce156project.Parking><csce156project.Year>
+  <code>xer4</code>
+  <product>Y</product>
+  <endDate>2016-10-07</endDate>
+  <startDate>2017-10-06</startDate>
+  <address>
+    <address>375 Northwoods</address>
+    <city>Souix City</city>
+    <state> IA</state>
+    <zip> 44982</zip>
+    <country> USA</country>
+  </address>
+  <cost>185.0</cost>
+  <pack>Bronze Fit</pack>
+</csce156project.Year><csce156project.Equipment>
+  <code>yp23</code>
+  <product>R</product>
+  <cost>19.50</cost>
+  <name>Cross Country Skis-Large</name>
+</csce156project.Equipment>

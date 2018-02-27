@@ -1,60 +1,78 @@
 {
   "membership": "M001",
-  "type": "G",
-  "id": "232",
-  "name": "Schmidt Consultanting",
+  "type": "General",
+  "id": "231",
+  "name": "Clark Consultants",
   "address": {
-    "city": "Omaha",
+    "address": "259 Concorde Suites",
+    "city": "Lincoln",
     "state": "NE",
-    "zip": "68235-0199",
+    "zip": "68588-0115",
     "country": "USA"
   }
 }
 {
   "membership": "M002",
-  "type": "S",
-  "id": "955c",
-  "name": "Yellow car inc",
+  "type": "Student",
+  "id": "944c",
+  "name": "CAS International Fellows",
   "address": {
+    "address": "1223 Oldfather Hall",
     "city": "Lincoln",
     "state": "NE",
-    "zip": "68512",
+    "zip": "68503",
     "country": "USA"
   }
 }
 {
   "membership": "M003",
-  "type": "S",
-  "id": "377a",
-  "name": "Worthless Club",
+  "type": "Student",
+  "id": "306a",
+  "name": "Valueless Club",
   "address": {
-    "city": "Arbys City",
+    "address": "123 Venture Way",
+    "city": "Culver City",
     "state": "CA",
-    "zip": "90210",
+    "zip": "90230",
     "country": "USA"
   }
 }
 {
   "membership": "M004",
-  "type": "G",
-  "id": "331f",
-  "name": "hornswallow",
+  "type": "General",
+  "id": "321f",
+  "name": "Stony Brook",
   "address": {
-    "city": "Lincoln",
-    "state": "NE",
-    "zip": "68533",
+    "address": "9800 Savage Rd",
+    "city": "Fort Meade",
+    "state": "MD",
+    "zip": "20755",
     "country": "USA"
   }
 }
 {
   "membership": "M005",
-  "type": "G",
-  "id": "RGB",
-  "name": "DELL",
+  "type": "General",
+  "id": "bbchar",
+  "name": "Hewlett Industries",
   "address": {
-    "city": "Saint Paul",
-    "state": "MN",
-    "zip": "55122",
+    "address": "1060 West Addison",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "60601",
+    "country": "USA"
+  }
+}
+{
+  "membership": "M006",
+  "type": "Student",
+  "id": "321dr",
+  "name": "Gregory Smith",
+  "address": {
+    "address": "456 West 7th St.",
+    "city": "Omaha",
+    "state": "NE",
+    "zip": "68500",
     "country": "USA"
   }
 }

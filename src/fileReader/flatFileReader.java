@@ -23,7 +23,7 @@ public class flatFileReader {
 	public static ArrayList<Persons> readPersons() {
 		int i = 0;
 		ArrayList<Persons> result = new ArrayList<Persons>();
-		String fileName = "Persons.dat";
+		String fileName = "data/Persons.dat";
 		Scanner s = null;
 		try {
 			s = new Scanner(new File(fileName));
@@ -43,7 +43,7 @@ public class flatFileReader {
 				String line = s.nextLine();
 				String[] data = line.split(";");
 				String temp = data[1];
-				String[] data2 = temp.split(", ");
+				String[] data2 = temp.split(",");
 				String lastName = data2[0];
 				String firstName = data2[1];
 				String id = data[0];
@@ -69,11 +69,15 @@ public class flatFileReader {
 		s.close();
 		return result;
 	}
-	//reads through Members.dat flat file for needed information
+	
+	/**
+	 * reads through Members.dat flat file for needed information
+	 * @return  ArrayList of Members
+	 */
 	public static ArrayList<Membership> readMembers() {
 		int j = 0;
 		ArrayList<Membership> result1 = new ArrayList<Membership>();
-		String fileNome = "Members.dat";
+		String fileNome = "data/Members.dat";
 		Scanner t = null;
 		try {
 			t = new Scanner(new File(fileNome));
@@ -112,11 +116,14 @@ public class flatFileReader {
 		t.close();
 		return result1;
 	}
-	//reads through Products.dat flat file for needed information
+	/**
+	 * The line describing the methods
+	 * @return ArrayList of all Services
+	 */
 	public static ArrayList<Service> readService() {
 		int j = 0;
 		ArrayList<Service> result1 = new ArrayList<Service>();
-		String fileNime = "Products.dat";
+		String fileNime = "data/Products.dat";
 		Scanner t = null;
 		try {
 			t = new Scanner(new File(fileNime));
@@ -201,7 +208,7 @@ public class flatFileReader {
 	{
 		int j = 0;
 		ArrayList<Invoice> result = new ArrayList<Invoice>();
-		String fileName = "Invoices.dat";
+		String fileName = "data/Invoices.dat";
 		Scanner t = null;
 		try {
 			t = new Scanner(new File(fileName));
