@@ -2,11 +2,12 @@ package csce156project;
 
 import Interface.Cost;
 import Interface.Discount;
+import Interface.ProductName;
 
 
-public abstract class Service implements Cost, Discount{
+public abstract class Service implements Cost, Discount, ProductName{
 
-	private String code;
+	protected String code;
 	protected String product;
 	
 	//creates constructor

@@ -50,5 +50,11 @@ public class Equipment extends Service{
 		return 0.04;
 	}
 
+	@Override
+	public String getProductName() {
+		// TODO Auto-generated method stub
+		return "Rental Equipment - " + code + " - "+ name;
+	}
+
 	
 }

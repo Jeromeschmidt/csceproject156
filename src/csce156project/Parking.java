@@ -36,5 +36,11 @@ public class Parking extends Service{
 		return 0.04;
 	}
 
+	@Override
+	public String getProductName() {
+		// TODO Auto-generated method stub
+		return "Parking Pass";
+	}
+
 	
 }

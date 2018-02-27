@@ -374,8 +374,7 @@ public class Invoice<T> {
 	}
 
 	public double getGrandTotal() {
-		
-	
+
 		if (m.getType().equals("Student")) {
 			disc = getDisc() + taxes;
 		} else {
@@ -383,36 +382,57 @@ public class Invoice<T> {
 		}
 
 		return total + fees + taxes - disc;
-		
+
 	}
-	
-	
-	
-	
 
 	public void writeLong() {
 
-			System.out.println("Invoice " + invoiceCode);
-			System.out.println("========================");
-			System.out.println("Personal Trainer: " +  getTrainer());
-			System.out.println("Member Info: ");
-			System.out.println(" " + m.getName());
-			System.out.println(" ["+m.getType()+"]");
-			System.out.println(" " + m.getAddress().getAddress());// member address part 1
-			System.out.println(" " + m.getAddress().getCity() + " " + m.getAddress().getState() + " " + m.getAddress().getZip());// member city state zip
-			System.out.println("-------------------------------------------");
-			System.out.printf("%5s %5s %40s %10s %10s\n", "Code", "Item", "Subtotal", "Tax", "Total");
+		System.out.println("Invoice " + invoiceCode);
+		System.out.println("========================");
+		System.out.println("Personal Trainer: " + getTrainer());
+		System.out.println("Member Info: ");
+		System.out.println(" " + m.getName());
+		System.out.println(" [" + m.getType() + "]");
+		System.out.println(" " + m.getAddress().getAddress());// member address part 1
+		System.out.println(
+				" " + m.getAddress().getCity() + " " + m.getAddress().getState() + " " + m.getAddress().getZip());// member
+																													// city
+																													// state
+																													// zip
+		System.out.println("-------------------------------------------");
+		System.out.printf("%5s %5s %40s %10s %10s\n", "Code", "Item", "Subtotal", "Tax", "Total");
+
+		String code = "";
+		String[] further = null;
+		int quantity = 0;
+		String prodName = "";
+		double cost = 0;
+		String addedInfo = "";
+		String moreInfo = "";
+		double subtotal = 0.0;
+		for (int i = 0; i < productList.length; i++) {
+			further = productList[i].split(":");
+			code = further[0];
+			quantity = Integer.parseInt(further[1]);
 			
-			for(String s: productList) {
-				
+			for(int j = 0; j < serviceList.size(); j++) {
+				if(code.equals(serviceList.get(j).getCode())) {
+					prodName = serviceList.get(j).getProductName();
+					cost = serviceList.get(j).getCostt();
+					
+					if(serviceList.get(j).getProduct().equals("R")) {
+						moreInfo = "/unit";					}
+					
+					addedInfo = "(" + quantity + " units @ $" + cost + moreInfo+ ")";
+					subtotal += cost * quantity;
+				}
 			}
 			
-			
-			System.out.printf("%5s %5s %40s %10s %10s\n", "Code", "Item", "Subtotal", "Tax", "Total");
-			
-			
-			System.out.println();
-			System.out.println();
-		
+			System.out.printf("%5s %5s %40s %10s %10s\n", code, prodName + " " + addedInfo, subtotal,"  y " , "Total");
+		}
+
+		System.out.println();
+		System.out.println();
+
 	}
 }

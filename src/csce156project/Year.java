@@ -77,5 +77,11 @@ public class Year extends Service{
 		return 0.06;
 	}
 
+	@Override
+	public String getProductName() {
+		// TODO Auto-generated method stub
+		return "Year-long membership " + pack;
+	}
+
 
 }

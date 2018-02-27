@@ -69,5 +69,11 @@ public class Day extends Service{
 		return 0.06;
 	}
 
+	@Override
+	public String getProductName() {
+		// TODO Auto-generated method stub
+		return "Day Pass";
+	}
+
 
 }

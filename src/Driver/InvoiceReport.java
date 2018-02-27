@@ -19,6 +19,7 @@ public class InvoiceReport {
 		List<Invoice> invoiceList = flatFileReader.readInvoice();
 		
 		Invoice invoice = null;
+		Invoice invoiceSingle = null;
 		
 		System.out.println("Executive Summary Report");
 		System.out.println("=========================");
@@ -75,8 +76,11 @@ public class InvoiceReport {
 		System.out.println("Individual Invoice Detail Reports");
 		System.out.println("==================================================");
 		
+		for(int k = 0; k < invoiceList.size(); k++) {
+			invoiceSingle = new Invoice(personList, memberList, serviceList, invoiceList, invoiceList.get(k).getMemberCode());
+			invoiceSingle.writeLong();
+		}
 		
-		invoice.writeLong();
 		
 		
 		
