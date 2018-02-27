@@ -403,8 +403,8 @@ public class Invoice<T> {
 			System.out.println("-------------------------------------------");
 			System.out.printf("%5s %5s %40s %10s %10s\n", "Code", "Item", "Subtotal", "Tax", "Total");
 			
-			for(Service s: serviceList) {
-				System.out.println(s.getCode());
+			for(String s: productList) {
+				
 			}
 			
 			

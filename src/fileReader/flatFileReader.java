@@ -230,7 +230,7 @@ public class flatFileReader {
 				String InvoiceDate = data4[3];
 				String temp = data4[4];
 				String[] ProductList = temp.split(",");
-								
+												
 				Invoice<T> invoice = new Invoice<T>(invoiceCode, memberCode, PTCode, InvoiceDate, ProductList);
 				
 				result.add(invoice);
