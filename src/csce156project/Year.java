@@ -80,7 +80,7 @@ public class Year extends Service{
 	@Override
 	public String getProductName() {
 		// TODO Auto-generated method stub
-		return "Year-long membership " + pack;
+		return "Year-long membership '" + pack+ "'";
 	}
 
 

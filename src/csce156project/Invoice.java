@@ -366,7 +366,7 @@ public class Invoice<T> {
 	public double getDisc() {
 
 		if (m.getType().equals("Student")) {
-			disc = tax + (total * 0.08);
+			disc = taxes + (total * 0.08);
 		}
 
 		return disc;
@@ -391,7 +391,7 @@ public class Invoice<T> {
 		System.out.println("========================");
 		System.out.println("Personal Trainer: " + getTrainer());
 		System.out.println("Member Info: ");
-		System.out.println(" " + m.getName());
+		System.out.println(" " + m.getName() + "  (" + m.getMembership() + ")");
 		System.out.println(" [" + m.getType() + "]");
 		System.out.println(" " + m.getAddress().getAddress());// member address part 1
 		System.out.println(
@@ -400,7 +400,7 @@ public class Invoice<T> {
 																													// state
 																													// zip
 		System.out.println("-------------------------------------------");
-		System.out.printf("%5s %5s %40s %10s %10s\n", "Code", "Item", "Subtotal", "Tax", "Total");
+		System.out.printf("%-10s %-10s %66s %10s %10s\n", "Code", "Item", "Subtotal", "Tax", "Total");
 
 		String code = "";
 		String[] further = null;
@@ -410,6 +410,14 @@ public class Invoice<T> {
 		String addedInfo = "";
 		String moreInfo = "";
 		double subtotal = 0.0;
+		int numFree = 0;
+		boolean isMem = true;
+		boolean isYear = false;
+		double subsubtotal = 0.0;
+		double subtax = 1.0;
+		double subtotals = 0.0;
+		double subtaxes = 0.0;
+		double totalTotals = 0.0;
 		for (int i = 0; i < productList.length; i++) {
 			further = productList[i].split(":");
 			code = further[0];
@@ -421,18 +429,85 @@ public class Invoice<T> {
 					cost = serviceList.get(j).getCostt();
 					
 					if(serviceList.get(j).getProduct().equals("R")) {
-						moreInfo = "/unit";					}
-					
+						moreInfo = "/unit";					
+						}
+					double disc = 1;
+					String third = "";
+					boolean park = true;
+					boolean free = true;
+					if (further.length == 3) {
+						third = further[2];
+						for (int k = 0; k < serviceList.size(); k++) {
+							if (third.equals(serviceList.get(k).getCode())) {
+								if (serviceList.get(k).getProduct().equals("D")) {
+									numFree = 1;
+								} else if (serviceList.get(k).getProduct().equals("Y")) {
+									numFree = quantity;
+								}
+							}
+
+						}
+
+					}
+					for (int l = 0; l < serviceList.size(); l++) {
+
+						if (code.equals(serviceList.get(l).getCode())) {
+							if (serviceList.get(l).getProduct().equals("D")) {
+
+							}
+							if (serviceList.get(l).getProduct().equals("Y") || (serviceList.get(j).getProduct().equals("D"))) {
+								isMem = false;
+								disc = serviceList.get(l).getDiscount();
+								tax = 0.06;
+							}
+
+							if (serviceList.get(l).getProduct().equals("P")) {
+								quantity = quantity - numFree;
+								tax = 0.04;
+							}
+
+							if (serviceList.get(l).getProduct().equals("Y")) {
+								isYear = true;
+							}
+							if (serviceList.get(l).getProduct().equals("R") && quantity - numFree == 0) {
+								disc = 0.95;
+								tax = 0.04;
+							}
+							subtotal = quantity * serviceList.get(l).getCostt() * disc;
+							
+							subtax = quantity * serviceList.get(l).getCostt() * disc * tax;
+
+						}
+
+					}
+					subsubtotal += subtotal;
 					addedInfo = "(" + quantity + " units @ $" + cost + moreInfo+ ")";
-					subtotal += cost * quantity;
+					
 				}
+				
 			}
 			
-			System.out.printf("%5s %5s %40s %10s %10s\n", code, prodName + " " + addedInfo, subtotal,"  y " , "Total");
+			System.out.printf("%-10s %-10s %-20s %66.2f %10.2f %12.2f\n", code, prodName + " \r", addedInfo, subtotal, subtax , subtotal + subtax);
+			subtaxes += subtax;
 		}
-
+		subtotals += subsubtotal;
+		
+		
+		System.out.println("                                                                                ====================================");
+		System.out.printf("%-10s %-10s %68.2f %10.2f %10.2f\n", "SUB-Totals", "", subtotals, subtaxes, subtotals + subtaxes);
+		if(getType().equals("Student")) {
+		System.out.printf("%-10s %74s %-75.2f\n", "DISCOUNT (8% STUDENT & NO TAX)", "$",   (0.08 *subtotals)+subtaxes);
+		System.out.printf("%-10s %80s %-81s\n", "ADDITIONAL FEE (Student)", "$",   "10.50");
+		System.out.printf("%-10s %94s %-81.2f\n", "TOTAL", "$",   (subtotals + subtaxes + getFees() - ((0.08 *subtotals)+subtaxes)));
+		}
+		else {
+			System.out.printf("%-10s %95s %-95.2f\n", "TOTAL", "$",   subtotals + subtaxes);
+		}
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("			Thank you for your purchase!");
 		System.out.println();
 		System.out.println();
 
-	}
-}
+	}}
