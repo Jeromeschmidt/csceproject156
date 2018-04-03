@@ -25,6 +25,14 @@ public class Invoice<T> {
 
 	}
 
+	/**
+	 * constructs invoice information from invoice.dat
+	 * @param invoiceCode
+	 * @param memberCode
+	 * @param pTCode
+	 * @param invoiceDate
+	 * @param productList
+	 */
 	public Invoice(String invoiceCode, String memberCode, String pTCode, String invoiceDate, String[] productList) {
 		super();
 		this.invoiceCode = invoiceCode;
@@ -35,6 +43,14 @@ public class Invoice<T> {
 
 	}
 
+	/**
+	 * passes created lists, selects all information from them that pertains to member whos code is passed
+	 * @param personList
+	 * @param memberList
+	 * @param serviceList
+	 * @param invoiceList
+	 * @param code
+	 */
 	public Invoice(List<Persons> personList, List<Membership> memberList, List<Service> serviceList,
 			List<Invoice> invoiceList, String code) {
 		this.personList = personList;
@@ -43,6 +59,9 @@ public class Invoice<T> {
 		this.invoiceList = invoiceList;
 		this.code = code;
 
+		/**
+		 * sets member and person variables to member whose information we want
+		 */
 		boolean found = false;
 		while (!found) {
 			for (int j = 0; j < memberList.size(); j++) {
@@ -57,7 +76,10 @@ public class Invoice<T> {
 				}
 			}
 		}
-
+		
+		/**
+		 * sets up invoice variables to specified member
+		 */
 		for (int l = 0; l < invoiceList.size(); l++) {
 			if (code.equals(invoiceList.get(l).getMemberCode())) {
 				this.productList = invoiceList.get(l).getProductList();
@@ -71,6 +93,7 @@ public class Invoice<T> {
 
 	}
 
+	
 	public List<Persons> getPersonList() {
 		return personList;
 	}
@@ -152,16 +175,28 @@ public class Invoice<T> {
 	String membershipType = null;
 	double taxes = 0;
 
+	/**
+	 * retrieves company name of desired member
+	 * @return name
+	 */
 	public String getName() {
 		this.name = m.getName();
 		return name;
 	}
 
+	/**
+	 * finds type of membership
+	 * @return membershipType
+	 */
 	public String getType() {
 		this.membershipType = m.getType();
 		return membershipType;
 	}
 
+	/**
+	 * finds name of desired member
+	 * @return person
+	 */
 	public String getPersonName() {
 
 		person = p.getLastName() + ", " + p.getFirstName();
@@ -169,6 +204,10 @@ public class Invoice<T> {
 		return person;
 	}
 
+	/**
+	 * finds Address class of desired member
+	 * @return addy
+	 */
 	public Address getAddress() {
 
 		this.addy = m.getAddress();
@@ -176,6 +215,10 @@ public class Invoice<T> {
 		return addy;
 	}
 
+	/**
+	 * builds string for individual report info on member
+	 * @return member
+	 */
 	public String getMember() {
 
 		this.member = m.getName() + " [" + m.getType() + "] ";
@@ -184,6 +227,11 @@ public class Invoice<T> {
 
 	}
 
+	
+	/**
+	 * finds trainer that signed the certain member
+	 * @return pile
+	 */
 	public String getTrainer() {
 		for (int i = 0; i < personList.size(); i++) {
 			if (pTCode.equals(personList.get(i).getId()))
@@ -196,11 +244,18 @@ public class Invoice<T> {
 
 	double total = 0;
 
+	/**
+	 * finds information on products of the given member and calculates a subtotal before tax,fee,and discount
+	 * @return subtotal
+	 */
 	public double getSubtotal() {
 
 		boolean isMem = true;
 		boolean isYear = false;
 		int numFree = 0;
+		/**
+		 * loops through list of products purchased by certain member
+		 */
 		for (int i = 0; i < productList.length; i++) {
 			String[] bits = productList[i].split(":");
 			String cod = bits[0];
@@ -209,6 +264,10 @@ public class Invoice<T> {
 			String third = "";
 			boolean park = true;
 			boolean free = true;
+			
+			/**
+			 * checks if product has a membership type its assigned to 
+			 */
 			if (bits.length == 3) {
 				third = bits[2];
 				for (int k = 0; k < serviceList.size(); k++) {
@@ -223,6 +282,9 @@ public class Invoice<T> {
 				}
 
 			}
+			/**
+			 * checks type of product and calculates values based on free passes and quantity * cost
+			 */
 			for (int j = 0; j < serviceList.size(); j++) {
 
 				if (cod.equals(serviceList.get(j).getCode())) {
@@ -259,6 +321,10 @@ public class Invoice<T> {
 
 	double fees = 0;
 
+	/**
+	 * finds fees related to membership type student
+	 * @return fees
+	 */
 	@SuppressWarnings("unlikely-arg-type")
 	public double getFees() {
 
@@ -273,6 +339,10 @@ public class Invoice<T> {
 
 	double tax = 0;
 
+	/**
+	 * calculates tax on products given student type or product type
+	 * @return taxes
+	 */
 	public double getTax() {
 
 		double total = 0;
@@ -346,23 +416,11 @@ public class Invoice<T> {
 
 	String codes = "";
 
-	public String getProductVal() {
-		for (int i = 0; i < productList.length; i++) {
-			String[] bits = productList[i].split(":");
-			String yo = bits[0];
-			for (int j = 0; j < serviceList.size(); j++) {
-				if (yo.equals(serviceList.get(j).getCode())) {
-					codes = codes.concat(serviceList.get(j).getCode() + "\n");
-				}
-
-			}
-
-		}
-		return codes;
-	}
-
 	double disc = 0;
-
+/**
+ * gets discount associated with Student memberships
+ * @return disc
+ */
 	public double getDisc() {
 
 		if (m.getType().equals("Student")) {
@@ -373,6 +431,10 @@ public class Invoice<T> {
 
 	}
 
+	/**
+	 * gets total of all purchases
+	 * @return grandtotal
+	 */
 	public double getGrandTotal() {
 
 		if (m.getType().equals("Student")) {
@@ -385,6 +447,9 @@ public class Invoice<T> {
 
 	}
 
+	/**
+	 * creates individual invoice for specified member
+	 */
 	public void writeLong() {
 
 		System.out.println("Invoice " + invoiceCode);
@@ -496,7 +561,7 @@ public class Invoice<T> {
 		System.out.println("                                                                                ====================================");
 		System.out.printf("%-10s %-10s %68.2f %10.2f %10.2f\n", "SUB-Totals", "", subtotals, subtaxes, subtotals + subtaxes);
 		if(getType().equals("Student")) {
-		System.out.printf("%-10s %74s %-75.2f\n", "DISCOUNT (8% STUDENT & NO TAX)", "$",   (0.08 *subtotals)+subtaxes);
+		System.out.printf("%-10s %75s %-75.2f\n", "DISCOUNT (8% STUDENT & NO TAX)", "$-",   (0.08 *subtotals)+subtaxes);
 		System.out.printf("%-10s %80s %-81s\n", "ADDITIONAL FEE (Student)", "$",   "10.50");
 		System.out.printf("%-10s %94s %-81.2f\n", "TOTAL", "$",   (subtotals + subtaxes + getFees() - ((0.08 *subtotals)+subtaxes)));
 		}

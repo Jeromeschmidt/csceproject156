@@ -8,7 +8,7 @@ public class Year extends Service{
 	private String cost;
 	private String pack;
 	
-	//creates constructor
+	
 	public Year(String code, String product, String endDate, String startDate, Address a, String pack, String cost) {
 		super(code, product);
 		this.endDate = endDate;
@@ -18,7 +18,7 @@ public class Year extends Service{
 		this.setPack(pack);
 	}
 
-	//getters and setters for new variables
+	
 	public String getEndDate() {
 		return endDate;
 	}

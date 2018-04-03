@@ -10,6 +10,8 @@ import csce156project.Service;
 import fileReader.flatFileReader;
 
 public class InvoiceReport {
+	
+	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] args) {
 
@@ -32,6 +34,9 @@ public class InvoiceReport {
 		double taxes2 = 0;
 		double discount2 = 0;
 		
+		/**
+		 * Reads invoice.dat and designs Executive Summary Report
+		 */
 		for(int i = 0 ; i < invoiceList.size(); i++) {	
 		String inCode = "";
 		String name = "";
@@ -52,6 +57,7 @@ public class InvoiceReport {
 		 disc = invoice.getDisc();
 		 overTotal = invoice.getGrandTotal();
 		 
+		 
 		 System.out.println(String.format("%-5s %-40s %-20s $%13.2f $%20.2f $%20.2f $-%20.2f $%15.2f", inCode,
 					name , trainer, subtotal, fee, tax, 
 					disc , overTotal));
@@ -65,7 +71,7 @@ public class InvoiceReport {
 		System.out.printf(
 				"=========================================================================================================================================================================\n");
 
-		System.out.printf("Totals:  %61s %12.2f $%20.2f $%20.2f $%20.2f $%15.2f", "$", subtotal2, fees2, taxes2,
+		System.out.printf("TOTAL:  %62s %12.2f $%20.2f $%20.2f $%20.2f $%15.2f", "$", subtotal2, fees2, taxes2,
 				discount2, grandTotal);
 		
 		System.out.println();
